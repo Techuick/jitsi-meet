@@ -298,7 +298,7 @@ class Conference extends AbstractConference<Props, *> {
                         <DisplayNameLabel participantId = { _largeVideoParticipantId } />
                     </Container> }
 
-                    <LonelyMeetingExperience />
+                    {/* <LonelyMeetingExperience /> */}
 
                     { _shouldDisplayTileView || <><Filmstrip /><Toolbox /></> }
                 </View>
@@ -432,7 +432,7 @@ function _mapStateToProps(state) {
         _fullscreenEnabled: getFeatureFlag(state, FULLSCREEN_ENABLED, true),
         _isParticipantsPaneOpen: isOpen,
         _largeVideoParticipantId: state['features/large-video'].participantId,
-        _pictureInPictureEnabled: getFeatureFlag(state, PIP_ENABLED),
+        _pictureInPictureEnabled: getFeatureFlag(state, PIP_ENABLED, true),
         _reducedUI: reducedUI,
         _showLobby: getIsLobbyVisible(state),
         _toolboxVisible: isToolboxVisible(state)

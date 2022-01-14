@@ -84,10 +84,10 @@ function Toolbox(props: Props) {
                     styles = { buttonStylesBorderless }
                     toggledStyles = { toggledButtonStyles } />
                 {
-                    additionalButtons.has('chat')
-                      && <ChatButton
-                          styles = { buttonStylesBorderless }
-                          toggledStyles = { backgroundToggledStyle } />
+                    // additionalButtons.has('chat')
+                    //   && <ChatButton
+                    //       styles = { buttonStylesBorderless }
+                    //       toggledStyles = { backgroundToggledStyle } />
                 }
 
                 { additionalButtons.has('raisehand') && (_reactionsEnabled
@@ -102,13 +102,13 @@ function Toolbox(props: Props) {
                 && <ParticipantsPaneButton
                     styles = { buttonStylesBorderless } />
                 }
-                {additionalButtons.has('togglecamera')
+                {/* {additionalButtons.has('togglecamera')
                       && <ToggleCameraButton
                           styles = { buttonStylesBorderless }
-                          toggledStyles = { backgroundToggledStyle } />}
-                <OverflowMenuButton
+                          toggledStyles = { backgroundToggledStyle } />} */}
+                {/* <OverflowMenuButton
                     styles = { buttonStylesBorderless }
-                    toggledStyles = { toggledButtonStyles } />
+                    toggledStyles = { toggledButtonStyles } /> */}
                 <HangupButton
                     styles = { hangupButtonStyles } />
             </SafeAreaView>

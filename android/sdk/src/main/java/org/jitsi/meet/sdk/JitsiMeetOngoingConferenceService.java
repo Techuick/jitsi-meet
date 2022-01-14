@@ -107,7 +107,8 @@ public class JitsiMeetOngoingConferenceService extends Service
                     stopSelf();
                     JitsiMeetLogger.w(TAG + " Couldn't start service, notification is null");
                 } else {
-                    startForeground(OngoingNotification.NOTIFICATION_ID, notification);
+                    // commented ongoing meeting
+                    // startForeground(OngoingNotification.NOTIFICATION_ID, notification);
                     JitsiMeetLogger.i(TAG + " Service started");
                 }
                 break;
@@ -163,7 +164,8 @@ public class JitsiMeetOngoingConferenceService extends Service
         }
     }
 
-    private class BroadcastReceiver extends android.content.BroadcastReceiver {
+    private clas
+    s BroadcastReceiver extends android.content.BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -173,7 +175,8 @@ public class JitsiMeetOngoingConferenceService extends Service
                 stopSelf();
                 JitsiMeetLogger.w(TAG + " Couldn't start service, notification is null");
             } else {
-                startForeground(OngoingNotification.NOTIFICATION_ID, notification);
+                // commented ongoing meeting
+                // startForeground(OngoingNotification.NOTIFICATION_ID, notification);
                 JitsiMeetLogger.i(TAG + " Service started");
             }
         }

@@ -15,7 +15,7 @@
  */
 
 import ReplayKit
-import JitsiMeetSDK
+//import JitsiMeetSDK
 
 private enum Constants {
     // the App Group ID value that the app and the broadcast extension targets are setup with. It differs for each app.
