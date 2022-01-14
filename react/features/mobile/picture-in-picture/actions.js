@@ -27,7 +27,7 @@ export function enterPictureInPicture() {
         if (getFeatureFlag(getState, PIP_ENABLED)) {
             const { PictureInPicture } = NativeModules;
             const p
-                = Platform.OS === 'ios'
+                = Platform.OS === 'android'
                     ? PictureInPicture
                         ? PictureInPicture.enterPictureInPicture()
                         : Promise.reject(
