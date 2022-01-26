@@ -97,16 +97,30 @@ export default {
         paddingVertical: 12
     },
 
+    logoContainer: {
+        borderRadius: 3,
+        // height: BaseTheme.spacing[7],
+        // width: 20,
+        marginTop: BaseTheme.spacing[1],
+        marginLeft: BaseTheme.spacing[2],
+        top: 0,
+        left: 0,
+        zIndex: 1,
+        // width: BaseTheme.spacing[7]
+        flex: 1
+    },
+
     pipButtonContainer: {
         borderRadius: 3,
         height: BaseTheme.spacing[7],
-        position: 'absolute',
+        // position: 'absolute',
         marginTop: BaseTheme.spacing[1],
         marginLeft: BaseTheme.spacing[1],
         top: 0,
         left: 0,
         zIndex: 1,
-        width: BaseTheme.spacing[7]
+        // width: BaseTheme.spacing[7]
+        flex: 1
     },
 
     pipButton: {
@@ -131,6 +145,7 @@ export default {
         alignItems: 'center',
         flex: 1,
         flexDirection: 'row',
+        flexWrap: 'wrap',
         height: BaseTheme.spacing[8],
         justifyContent: 'center'
     },

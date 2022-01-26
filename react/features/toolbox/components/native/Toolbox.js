@@ -109,8 +109,8 @@ function Toolbox(props: Props) {
                 {/* <OverflowMenuButton
                     styles = { buttonStylesBorderless }
                     toggledStyles = { toggledButtonStyles } /> */}
-                <HangupButton
-                    styles = { hangupButtonStyles } />
+                {/* <HangupButton
+                    styles = { hangupButtonStyles } /> */}
             </SafeAreaView>
         </View>
     );

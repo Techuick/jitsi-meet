@@ -128,7 +128,7 @@ class Labels extends Component<Props, State> {
                             onPress = {
                                 this._createOnPress(LABEL_ID_INSECURE_ROOM_NAME)
                             } >
-                            <InsecureRoomNameLabel />
+                            {/* <InsecureRoomNameLabel /> */}
                         </TouchableOpacity>
                         <TouchableOpacity
                             hitSlop = { LabelHitSlop }

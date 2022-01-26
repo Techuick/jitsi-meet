@@ -52,13 +52,13 @@ public class JitsiMeetOngoingConferenceService extends Service
 
         ComponentName componentName;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            componentName = context.startForegroundService(intent);
+            // componentName = context.startForegroundService(intent);
         } else {
-            componentName = context.startService(intent);
+            // componentName = context.startService(intent);
         }
-        if (componentName == null) {
-            JitsiMeetLogger.w(TAG + " Ongoing conference service not started");
-        }
+        // if (componentName == null) {
+        //     JitsiMeetLogger.w(TAG + " Ongoing conference service not started");
+        // }
     }
 
     static void abort(Context context) {
@@ -164,8 +164,7 @@ public class JitsiMeetOngoingConferenceService extends Service
         }
     }
 
-    private clas
-    s BroadcastReceiver extends android.content.BroadcastReceiver {
+    private class BroadcastReceiver extends android.content.BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent) {

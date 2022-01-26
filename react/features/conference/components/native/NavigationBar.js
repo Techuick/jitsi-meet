@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Image } from 'react-native';
 
 import { getConferenceName, getConferenceTimestamp } from '../../../base/conference/functions';
 import { getFeatureFlag, CONFERENCE_TIMER_ENABLED, MEETING_NAME_ENABLED } from '../../../base/flags';
@@ -14,6 +14,7 @@ import ConferenceTimer from '../ConferenceTimer';
 import Labels from './Labels';
 import styles from './styles';
 
+const JITSI_LOGO = require('../../../../../images/cuemeLogo.jpeg');
 
 type Props = {
 
@@ -54,6 +55,11 @@ const NavigationBar = (props: Props) => {
         <View
             pointerEvents = 'box-none'
             style = { styles.navBarWrapper }>
+            <View style = { styles.logoContainer }>
+            <Image source={JITSI_LOGO} 
+            style={{ width: 30, height: 30, borderRadius: 50 }}/>
+            </View>
+
             <View style = { styles.pipButtonContainer }>
                 <PictureInPictureButton styles = { styles.pipButton } />
             </View>
@@ -78,9 +84,9 @@ const NavigationBar = (props: Props) => {
                 }
                 <Labels />
             </View>
-            <View style = { styles.inviteButtonContainer }>
+            {/* <View style = { styles.inviteButtonContainer }>
                 <InviteButton styles = { styles.inviteButton } />
-            </View>
+            </View> */}
         </View>
     );
 };

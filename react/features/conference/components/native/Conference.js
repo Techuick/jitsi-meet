@@ -298,7 +298,7 @@ class Conference extends AbstractConference<Props, *> {
                         <DisplayNameLabel participantId = { _largeVideoParticipantId } />
                     </Container> }
 
-                    <LonelyMeetingExperience />
+                    {/* <LonelyMeetingExperience /> */}
 
                     { _shouldDisplayTileView || <><Filmstrip /><Toolbox /></> }
                 </View>
