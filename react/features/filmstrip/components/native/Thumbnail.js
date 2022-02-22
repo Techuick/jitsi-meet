@@ -36,6 +36,7 @@ import RaisedHandIndicator from './RaisedHandIndicator';
 import ScreenShareIndicator from './ScreenShareIndicator';
 import VideoMutedIndicator from './VideoMutedIndicator';
 import styles, { AVATAR_SIZE } from './styles';
+import { VIDEO_MUTE_BUTTON_ENABLED } from '../../../base/flags';
 
 /**
  * Thumbnail component's property types.
@@ -140,7 +141,12 @@ type Props = {
     /**
      * If true, it tells the thumbnail that it needs to behave differently. E.g. React differently to a single tap.
      */
-    tileView?: boolean
+    tileView?: boolean,
+
+    /**
+     * If true, it tells the thumbnail that its tile should not be shown.
+     */
+     showTileView?: boolean,
 };
 
 /**
@@ -288,7 +294,10 @@ class Thumbnail extends PureComponent<Props> {
             maxWidth: null,
             width: null
         } : null;
-
+        console.log("popop");
+        console.log(this.props.showTileView);
+        if (this.props.showTileView)
+        return (<Container></Container>)
         return (
             <Container
                 onClick = { this._onClick }
@@ -366,7 +375,8 @@ function _mapStateToProps(state, ownProps) {
         _renderDominantSpeakerIndicator: renderDominantSpeakerIndicator,
         _renderModeratorIndicator: renderModeratorIndicator,
         _styles: ColorSchemeRegistry.get(state, 'Thumbnail'),
-        _videoMuted: videoMuted
+        _videoMuted: videoMuted,
+        showTileView: (participant.email == "fake")
     };
 }
 

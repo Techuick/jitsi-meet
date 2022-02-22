@@ -90,7 +90,7 @@ function Toolbox(props: Props) {
                     //       toggledStyles = { backgroundToggledStyle } />
                 }
 
-                { additionalButtons.has('raisehand') && (_reactionsEnabled
+                {/* { additionalButtons.has('raisehand') && (_reactionsEnabled
                     ? <ReactionsMenuButton
                         styles = { buttonStylesBorderless }
                         toggledStyles = { backgroundToggledStyle } />
@@ -101,7 +101,7 @@ function Toolbox(props: Props) {
                 {additionalButtons.has('participantspane')
                 && <ParticipantsPaneButton
                     styles = { buttonStylesBorderless } />
-                }
+                } */}
                 {/* {additionalButtons.has('togglecamera')
                       && <ToggleCameraButton
                           styles = { buttonStylesBorderless }

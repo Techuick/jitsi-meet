@@ -230,8 +230,9 @@ const _throttledNotifyParticipantConnected = throttle((dispatch: Dispatch<any>, 
     }
 
     if (notificationProps) {
-        dispatch(
-            showNotification(notificationProps, NOTIFICATION_TIMEOUT_TYPE.SHORT));
+        // dont want to show these notifications for cueme
+        // dispatch(
+        //     showNotification(notificationProps, NOTIFICATION_TIMEOUT_TYPE.SHORT));
     }
 
     joinedParticipantsNames = [];
@@ -294,8 +295,9 @@ const _throttledNotifyParticipantLeft = throttle((dispatch: Dispatch<any>, getSt
     }
 
     if (notificationProps) {
-        dispatch(
-            showNotification(notificationProps, NOTIFICATION_TIMEOUT_TYPE.SHORT));
+        // dont want to show these notifications for cueme
+        // dispatch(
+        //     showNotification(notificationProps, NOTIFICATION_TIMEOUT_TYPE.SHORT));
     }
 
     leftParticipantsNames = [];

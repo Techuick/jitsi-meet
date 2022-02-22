@@ -37,7 +37,7 @@ import LonelyMeetingExperience from './LonelyMeetingExperience';
 import NavigationBar from './NavigationBar';
 import { screen } from './routes';
 import styles from './styles';
-
+import { VIDEO_MUTE_BUTTON_ENABLED } from '../../../base/flags';
 
 /**
  * The type of the React {@code Component} props of {@link Conference}.
@@ -102,6 +102,11 @@ type Props = AbstractProps & {
      * Indicates whether the lobby screen should be visible.
      */
     _showLobby: boolean,
+
+    /**
+     * Indicates whether the video button is enabled or not.
+     */
+    _video_mute_button_enabled: boolean,
 
     /**
      * The redux {@code dispatch} function.
@@ -261,7 +266,9 @@ class Conference extends AbstractConference<Props, *> {
         if (_reducedUI) {
             return this._renderContentForReducedUi();
         }
-
+console.log("afsdfasffsfsd")
+console.log(_shouldDisplayTileView)
+console.log(this.props)
         return (
             <>
                 {/*
@@ -300,7 +307,7 @@ class Conference extends AbstractConference<Props, *> {
 
                     {/* <LonelyMeetingExperience /> */}
 
-                    { _shouldDisplayTileView || <><Filmstrip /><Toolbox /></> }
+                    { this.props._video_mute_button_enabled ? _shouldDisplayTileView || <><Filmstrip /><Toolbox /></> : <Container/>}
                 </View>
 
                 <SafeAreaView
@@ -422,7 +429,7 @@ function _mapStateToProps(state) {
     //   are leaving one.
     const connecting_
         = connecting || (connection && (!membersOnly && (joining || (!conference && !leaving))));
-
+        const enabledFlag = getFeatureFlag(state, VIDEO_MUTE_BUTTON_ENABLED, true);
     return {
         ...abstractMapStateToProps(state),
         _aspectRatio: aspectRatio,
@@ -435,7 +442,8 @@ function _mapStateToProps(state) {
         _pictureInPictureEnabled: getFeatureFlag(state, PIP_ENABLED),
         _reducedUI: reducedUI,
         _showLobby: getIsLobbyVisible(state),
-        _toolboxVisible: isToolboxVisible(state)
+        _toolboxVisible: isToolboxVisible(state),
+        _video_mute_button_enabled: enabledFlag
     };
 }
 
