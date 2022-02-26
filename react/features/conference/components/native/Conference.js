@@ -276,7 +276,7 @@ console.log(this.props)
                   */
                     _shouldDisplayTileView
                         ? <TileView onClick = { this._onClick } />
-                        : <LargeVideo onClick = { this._onClick } />
+                        : <TileView onClick = { this._onClick } />
                 }
 
                 {/*
@@ -307,7 +307,7 @@ console.log(this.props)
 
                     {/* <LonelyMeetingExperience /> */}
 
-                    { this.props._video_mute_button_enabled ? _shouldDisplayTileView || <><Filmstrip /><Toolbox /></> : <Container/>}
+                    { this.props._video_mute_button_enabled ? _shouldDisplayTileView || <><Toolbox /></> : <Container/>}
                 </View>
 
                 <SafeAreaView
