@@ -102,10 +102,9 @@ function Toolbox(props: Props) {
                 && <ParticipantsPaneButton
                     styles = { buttonStylesBorderless } />
                 } */}
-                {/* {additionalButtons.has('togglecamera')
-                      && <ToggleCameraButton
+                {<ToggleCameraButton
                           styles = { buttonStylesBorderless }
-                          toggledStyles = { backgroundToggledStyle } />} */}
+                          toggledStyles = { backgroundToggledStyle } />}
                 {/* <OverflowMenuButton
                     styles = { buttonStylesBorderless }
                     toggledStyles = { toggledButtonStyles } /> */}

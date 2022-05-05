@@ -36,7 +36,6 @@ import RaisedHandIndicator from './RaisedHandIndicator';
 import ScreenShareIndicator from './ScreenShareIndicator';
 import VideoMutedIndicator from './VideoMutedIndicator';
 import styles, { AVATAR_SIZE } from './styles';
-import { VIDEO_MUTE_BUTTON_ENABLED } from '../../../base/flags';
 
 /**
  * Thumbnail component's property types.

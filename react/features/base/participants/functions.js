@@ -193,14 +193,11 @@ export function getParticipantCountWithFake(stateful: Object | Function) {
     const { local, remote } = state;
 arr = Array.from(remote instanceof Map ? remote.entries() : Object.entries(remote));
 size = remote.size;
-console.log(size);
 for (i = 0; i < arr.length; i++) {
     if (arr[i][1]["email"] != undefined && arr[i][1]["email"] == "fake") {
     size--;
     }
 }
-console.log("llll")
-console.log(local && local.email != 'fake');
     return size + ((local && local.email != 'fake') ? 1 : 0);
     // return remote.size + (local ? 1 : 0);
 }

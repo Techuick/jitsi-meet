@@ -83,7 +83,7 @@ MiddlewareRegistry.register(store => next => action => {
         const oldRole = oldParticipant?.role;
 
         if (oldRole && oldRole !== role && role === PARTICIPANT_ROLE.MODERATOR) {
- // dont need moderator notification for cueme
+    // dont need moderator notification for cueme
             // store.dispatch(showNotification({
             //     titleKey: 'notify.moderator'
             // },
